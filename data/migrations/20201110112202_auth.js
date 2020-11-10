@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
    return knex.schema
-      .createTable('roles', tbl => {
+      .createTable('department', tbl => {
          tbl.increments()
 
          tbl.string('name', 128)
@@ -19,9 +19,9 @@ exports.up = function(knex) {
          tbl.string('password', 128)
             .notNullable()
 
-         tbl.integer('role')
+         tbl.integer('deparment')
             .unsigned()
-            .references('roles.id')
+            .references('deparment.id')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE')
       })
@@ -29,6 +29,6 @@ exports.up = function(knex) {
 
 exports.down = function(knex) {
   return knex.schema
-      .dropTableIfExists('roles')
+      .dropTableIfExists('department')
       .dropTableIfExists('users')
 };
