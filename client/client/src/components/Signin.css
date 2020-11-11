@@ -1,0 +1,21 @@
+.sign__in {
+   height: 90vh;
+   width: 30%;
+   margin-top: 4%;
+}
+
+.sign__in__form {
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+}
+
+.sign__in__label {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 5%;
+}
+
+.sign__in__form > button {
+   margin-top: 7%;
+}
