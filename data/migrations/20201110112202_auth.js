@@ -1,0 +1,34 @@
+
+exports.up = function(knex) {
+   return knex.schema
+      .createTable('department', tbl => {
+         tbl.increments()
+
+         tbl.string('name', 128)
+            .notNullable()
+            .unique()
+      })
+
+      .createTable('users', tbl => {
+         tbl.increments()
+
+         tbl.string('username', 128)
+            .notNullable()
+            .unique()
+
+         tbl.string('password', 128)
+            .notNullable()
+
+         tbl.integer('deparment')
+            .unsigned()
+            .references('deparment.id')
+            .onDelete('RESTRICT')
+            .onUpdate('CASCADE')
+      })
+};
+
+exports.down = function(knex) {
+  return knex.schema
+      .dropTableIfExists('department')
+      .dropTableIfExists('users')
+};

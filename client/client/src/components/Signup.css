@@ -1,0 +1,22 @@
+.sign__up {
+   width: 18%;
+   margin-top: 4%;
+   height: 90vh;
+}
+
+.sign__up__form {
+
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+}
+
+.sign__up__label {
+   margin-top: 10%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.sign__up__form button {
+   margin-top: 10%;
+}

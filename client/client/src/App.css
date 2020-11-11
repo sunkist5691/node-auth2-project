@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .navigation {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.App .navigation a {
+  color: gray;
+  text-decoration: none;
+}
+
+.App .navigation a:hover {
+  cursor: pointer;
+  color: black;
+}
+
